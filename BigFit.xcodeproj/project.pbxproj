@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		102CBE0B25A3A15D00E7C404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102CBE0925A3A15D00E7C404 /* LaunchScreen.storyboard */; };
 		102CBE1625A3A15D00E7C404 /* BigFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CBE1525A3A15D00E7C404 /* BigFitTests.swift */; };
 		102CBE2125A3A15D00E7C404 /* BigFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CBE2025A3A15D00E7C404 /* BigFitUITests.swift */; };
+		105F253525A6505E00E3D499 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 105F253425A6505E00E3D499 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105F253525A6505E00E3D499 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = BigFit;
+			packageProductDependencies = (
+				105F253425A6505E00E3D499 /* SwiftUICharts */,
+			);
 			productName = BigFit;
 			productReference = 102CBDFB25A3A15C00E7C404 /* BigFit.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 102CBDF225A3A15C00E7C404;
+			packageReferences = (
+				105F253325A6505E00E3D499 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 102CBDFC25A3A15C00E7C404 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -597,6 +605,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		105F253325A6505E00E3D499 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		105F253425A6505E00E3D499 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105F253325A6505E00E3D499 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 102CBDF325A3A15C00E7C404 /* Project object */;
 }
