@@ -16,13 +16,12 @@ struct ContentView: View {
     var workoutsPerWeek = ["2 тренировки", "3 тренировки", "4 тренировки"]
     @State private var workoutsPerWeekSelected = 0
     
-    var workoutStyle = ["легкая", "средняя", "тяжелая"]
-    @State private var workout1StyleSelected = 0
-    @State private var workout2StyleSelected = 0
-    @State private var workout3StyleSelected = 0
-    @State private var workout4StyleSelected = 0
+    @State private var workout1ModeSelected: WorkoutMode = .easy
+    @State private var workout2ModeSelected: WorkoutMode = .easy
+    @State private var workout3ModeSelected: WorkoutMode = .easy
+    @State private var workout4ModeSelected: WorkoutMode = .easy
     
-    @State private var trainingModeSelected: TrainingMode = .low
+    @State private var cycleModeSelected: CycleMode = .low
     
     @State private var progression = 0.5
     
@@ -58,9 +57,9 @@ struct ContentView: View {
                     HStack {
                         Text("Первая")
                         Spacer()
-                        Picker(selection: $workout1StyleSelected, label: Text("Первая")) {
-                            ForEach(0 ..< workoutStyle.count) {
-                                Text(self.workoutStyle[$0])
+                        Picker(selection: $workout1ModeSelected, label: Text(workout1ModeSelected.rawValue)) {
+                            ForEach(WorkoutMode.allCases, id:\.self) {
+                                Text($0.rawValue)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
@@ -69,9 +68,9 @@ struct ContentView: View {
                     HStack {
                         Text("Вторая")
                         Spacer()
-                        Picker(selection: $workout2StyleSelected, label: Text("Вторая")) {
-                            ForEach(0 ..< workoutStyle.count) {
-                                Text(self.workoutStyle[$0])
+                        Picker(selection: $workout2ModeSelected, label: Text(workout2ModeSelected.rawValue)) {
+                            ForEach(WorkoutMode.allCases, id:\.self) {
+                                Text($0.rawValue)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
@@ -80,9 +79,9 @@ struct ContentView: View {
                     HStack {
                         Text("Третья")
                         Spacer()
-                        Picker(selection: $workout3StyleSelected, label: Text("Третья")) {
-                            ForEach(0 ..< workoutStyle.count) {
-                                Text(self.workoutStyle[$0])
+                        Picker(selection: $workout3ModeSelected, label: Text(workout3ModeSelected.rawValue)) {
+                            ForEach(WorkoutMode.allCases, id:\.self) {
+                                Text($0.rawValue)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
@@ -92,9 +91,9 @@ struct ContentView: View {
                     HStack {
                         Text("Четвертая")
                         Spacer()
-                        Picker(selection: $workout4StyleSelected, label: Text("Четвертая")) {
-                            ForEach(0 ..< workoutStyle.count) {
-                                Text(self.workoutStyle[$0])
+                        Picker(selection: $workout4ModeSelected, label: Text(workout4ModeSelected.rawValue)) {
+                            ForEach(WorkoutMode.allCases, id:\.self) {
+                                Text($0.rawValue)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
@@ -105,8 +104,8 @@ struct ContentView: View {
                 HStack {
                     Text("Режим")
                     Spacer()
-                    Picker(selection: $trainingModeSelected, label: Text(trainingModeSelected.rawValue)) {
-                        ForEach(TrainingMode.allCases, id:\.self) {
+                    Picker(selection: $cycleModeSelected, label: Text(cycleModeSelected.rawValue)) {
+                        ForEach(CycleMode.allCases, id:\.self) {
                             Text($0.rawValue)
                         }
                     }

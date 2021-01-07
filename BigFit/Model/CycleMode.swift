@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TrainingMode: String, CaseIterable {
+enum CycleMode: String, CaseIterable {
     case low = "Силовой 2-6"
     case mid = "Средний 6-10"
     case high = "Многоповтор 8-15"
