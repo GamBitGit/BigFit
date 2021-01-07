@@ -22,8 +22,7 @@ struct ContentView: View {
     @State private var workout3StyleSelected = 0
     @State private var workout4StyleSelected = 0
     
-    var trainingMode = ["Силовой 2-6", "Средний 6-10", "Многоповтор 8-15"]
-    @State private var trainingModeSelected = 0
+    @State private var trainingModeSelected: TrainingMode = .low
     
     @State private var progression = 0.5
     
@@ -106,9 +105,9 @@ struct ContentView: View {
                 HStack {
                     Text("Режим")
                     Spacer()
-                    Picker(selection: $trainingModeSelected, label: Text(self.trainingMode[trainingModeSelected])) {
-                        ForEach(0 ..< trainingMode.count) {
-                            Text(self.trainingMode[$0])
+                    Picker(selection: $trainingModeSelected, label: Text(trainingModeSelected.rawValue)) {
+                        ForEach(TrainingMode.allCases, id:\.self) {
+                            Text($0.rawValue)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())

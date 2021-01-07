@@ -16,6 +16,7 @@
 		102CBE1625A3A15D00E7C404 /* BigFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CBE1525A3A15D00E7C404 /* BigFitTests.swift */; };
 		102CBE2125A3A15D00E7C404 /* BigFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CBE2025A3A15D00E7C404 /* BigFitUITests.swift */; };
 		105F253525A6505E00E3D499 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 105F253425A6505E00E3D499 /* SwiftUICharts */; };
+		105F254025A7A40E00E3D499 /* TrainingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F253F25A7A40E00E3D499 /* TrainingMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		102CBE1C25A3A15D00E7C404 /* BigFitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigFitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102CBE2025A3A15D00E7C404 /* BigFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFitUITests.swift; sourceTree = "<group>"; };
 		102CBE2225A3A15D00E7C404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		105F253F25A7A40E00E3D499 /* TrainingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		102CBDFD25A3A15C00E7C404 /* BigFit */ = {
 			isa = PBXGroup;
 			children = (
+				105F253E25A7A38D00E3D499 /* Model */,
 				102CBDFE25A3A15C00E7C404 /* AppDelegate.swift */,
 				102CBE0025A3A15C00E7C404 /* SceneDelegate.swift */,
 				102CBE0225A3A15C00E7C404 /* ContentView.swift */,
@@ -136,6 +139,14 @@
 				102CBE2225A3A15D00E7C404 /* Info.plist */,
 			);
 			path = BigFitUITests;
+			sourceTree = "<group>";
+		};
+		105F253E25A7A38D00E3D499 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				105F253F25A7A40E00E3D499 /* TrainingMode.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				102CBDFF25A3A15C00E7C404 /* AppDelegate.swift in Sources */,
 				102CBE0125A3A15C00E7C404 /* SceneDelegate.swift in Sources */,
 				102CBE0325A3A15C00E7C404 /* ContentView.swift in Sources */,
+				105F254025A7A40E00E3D499 /* TrainingMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
