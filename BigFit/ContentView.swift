@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ContentView: View {
     
@@ -37,7 +38,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Form {
+            List {
                 HStack {
                     Picker(selection: $weeksSelected, label: Text("Количество недель")) {
                         ForEach(0 ..< weeksCount.count) {
@@ -183,5 +184,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
     }
 }
